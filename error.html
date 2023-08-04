@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error ! | Try Again</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700");
+      @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
+      body {
+        font-family: "Jost", sans-serif;
+        background-image: linear-gradient(90deg, #b9c9f3, #e3b9f3);
+        margin-top: 0;
+      }
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 25%;
+        height: 60%;
+        background-image: linear-gradient(90deg, #97abdd, #c17add);
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+        
+      }
+      .dots {
+        position: relative;
+        width: 100%;
+        height: 10%;
+        border-radius: 20px;
+        box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 5px rgb(0, 0, 0);
+      }
+      .dot {
+        position: absolute;
+        width: 4%;
+        height: 35%;
+        right: 5%;
+        border-radius: 50%;
+        background-color: white;
+      }
+      .dot:hover {
+        cursor: pointer;
+      }
+      .dot2 {
+        right: 12%;
+        opacity: 0.5;
+      }
+      .try-again {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 10%;
+        bottom: 10%;
+      }
+      .try {
+        position: relative;
+        background-color: wheat;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        font-size: x-large;
+        font-weight: 500;
+        text-transform: uppercase;
+        justify-content: center;
+        height: 100%;
+        border-radius: 20px;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 5px 5px 20px rgba(203, 205, 211, 0.1);
+      }
+      .try:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      .error {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 30%;
+        color: #5e5e5e;
+        letter-spacing: 1px;
+        bottom: 25%;
+        flex-direction: column;
+      }
+      .error-msg {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        font-weight: 700;
+        font-size: xx-large;
+        text-transform: uppercase;
+        height: 30%;
+        top: 0;
+        color: white;
+      }
+      .msg {
+        position: relative;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        width: 100%;
+        font-size: larger;
+        height: 70%;
+        line-height: 134%;
+      }
+      .error-msg span {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 3px solid rgb(26, 255, 0); /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        animation: typing 3s steps(10, end), blink-caret 0.75s step-end infinite;
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 37%;
+        }
+      }
+
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        30% {
+          border-color: rgb(255, 0, 0);
+        }
+      }
+      .imoji {
+        position: absolute;
+        width: 100%;
+        height: 15%;
+        top: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .face {
+        position: absolute;
+        width: 15%;
+        height: 85%;
+        background-color: #ffffff;
+        animation: rotate 3s ease-in-out infinite;
+        border-radius: 50%;
+        border: 2px solid #827de4;
+      }
+      .eyes {
+        position: absolute;
+        width: 100%;
+        height: 25%;
+        left: 0;
+        top: 25%;
+      }
+      .eye {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        left: 30%;
+        background-color: #827de4;
+      }
+      .eye-two {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        right: 30%;
+        border-radius: 50%;
+        background-color: #827de4;
+      }
+      .smile {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        top: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .smi {
+        position: absolute;
+        border: 3px solid;
+        border-color: #777777 transparent transparent #777777;
+        transform: rotate(45deg);
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+      }
+      @keyframes scale {
+        50% {
+          transform: scale(0.9);
+        }
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+          left: 25%;
+        }
+        50% {
+          left: 60%;
+          transform: rotate(168deg);
+        }
+        100% {
+          transform: rotate(0deg);
+          left: 25%;
+        }
+      }
+      @media screen and (max-width: 500px) {
+        .container {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90%;
+          height: 55%;
+        }
+        .dot {
+          width: 5%;
+        }
+        .msg {
+          line-height: 160%;
+        }
+        .face {
+          width: 18%;
+          height: 65%;
+        }
+        .imoji {
+          height: 20%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="dots">
+        <div class="dot move"></div>
+        <div class="dot dot2 move"></div>
+      </div>
+      <div class="imoji">
+        <div class="face">
+          <div class="eyes">
+            <div class="eye"></div>
+            <div class="eye-two"></div>
+          </div>
+          <div class="smile">
+            <div class="smi"></div>
+          </div>
+        </div>
+      </div>
+      <div class="error">
+        <div class="error-msg"><span> Error!</span></div>
+        <div class="msg">City does not match with our database ,Sorry !</div>
+      </div>
+      <div class="try-again">
+        <div class="try" id="try" onclick="redirect()">Try Again</div>
+      </div>
+    </div>
+
+    <script>
+      function redirect() {
+        window.location.href = "index.php";
+      }
+    </script>
+  </body>
+</html>
