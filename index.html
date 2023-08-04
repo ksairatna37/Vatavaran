@@ -1,0 +1,804 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Finlandica&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Finlandica&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.png" type="image/png" sizes="76x76" />
+  <style>
+    body {
+        margin: 0;
+        background-color:white;
+    }
+    a{
+        text-decoration: none;
+        text-decoration-line: none;
+        text-decoration-style: initial;
+        text-decoration-color: initial;
+        color:inherit
+    }
+    header {
+        height: 130px;
+        width: 100%;
+        background-color: black;
+        justify-content: space-between;
+        font-family: 'Poppins', sans-serif;
+    }
+    .cursor {
+        position: fixed;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        pointer-events: none;
+        left: -100px;
+        top: 50%;
+        mix-blend-mode: difference;
+        background-color: rgb(255, 0, 0);
+        z-index: 10000;
+        border: 2px solid rgb(255, 0, 0);
+        height: 30px;
+        width: 30px;
+        transition: all 300ms ease-out;
+      }
+    .img1 {
+        position: absolute;
+        width: 100%;
+        top: 130px;
+        height: 410px;
+        background: rgba(0, 0, 0, 0.5) url(characters_art_mas_dsk_01.jpg);
+        background-size: cover;
+        background-blend-mode: darken;
+    }
+    
+    .a {
+        position: absolute;
+        color: white;
+        top: 300px;
+        left: 560px;
+        font-size: 40px;
+        font-family: 'Finlandica', sans-serif;
+        font-weight: 1000;
+    
+    }
+    
+    .b {
+        position: absolute;
+        color: white;
+        top: 350px;
+        left: 400px;
+        font-size: 20px;
+        font-family: "Roboto";
+        line-height: 50px;
+    }
+    
+    .img img{
+        height: 210px;
+        width: 168px;
+        
+    }
+    img{   
+        box-shadow: 0px 10px 10px rgb(31, 30, 30);
+        border-bottom-right-radius: 30px;
+    }
+    .image{
+        border-radius: 0px;
+    }
+    .spot{
+        font-family: 'Oswald', sans-serif;
+        font-size: 25px;
+        font-family: Roboto;
+        font-weight: 900;   
+    }
+    .grid1 hr{
+        position: absolute;
+        top: 290px;
+        left: -130px;
+        width: 100%;
+        height: 4px;
+    }
+    .mid2{
+        padding-top: 150px;
+        margin-left: 12%;
+        font-family: 'Oswald', sans-serif;
+        
+    }
+    .middlediv {
+        font-family: 'Oswald', sans-serif;
+        width: 70%;
+        background-color: white;
+        display: flex;
+        position: relative;
+        top: 80px;
+        margin-left: 12%;
+        margin-top: 470px;
+    }
+    
+    .grid1 {
+        position: absolute;
+        top: 100px;
+        width: 76%;   
+        background-color: white;
+        display: flex;
+        position: relative;
+        margin-left: 12%;
+        padding: 20px;
+    }
+    .grid2{
+        position: absolute;
+        top: 30px;
+        width: 76%;
+        background-color: white;
+        display: flex;
+        position: relative;
+        margin-left: 12%;
+        padding: 20px;
+    }
+    .grid2 hr{
+        position: absolute;
+        top: 290px;
+        left: -130px;
+        width: 100%;
+        height: 4px;
+    }
+    .grid3{
+        margin-top: 40px;
+        width: 76%;
+        background-color: white;
+        display: flex;
+        position: relative;
+        top: 100px;
+        margin-left: 12%;
+        padding: 20px;
+    }
+    .grid4{
+        width: 76%;
+        background-color: white;
+        display: flex;
+        position: relative;
+        top: 10px;
+        margin-left: 12%;
+        padding: 20px;
+    }
+    .grid3 hr{
+        position: absolute;
+        top: 290px;
+        left: -130px;
+        width: 100%;
+        height: 4px;
+    }
+    .B {
+        margin-right: 30px;
+        transition: 0.5s;
+    }
+    .B:hover{
+        transform: scale(1.1);
+    }
+    
+    .C {
+        margin-top: 7px;
+        margin-bottom: 0px;
+        font-style: normal;
+        font-variant-ligatures: normal;
+        font-variant-caps: normal;
+        font-variant-numeric: normal;
+        font-variant-east-asian: normal;
+        font-weight: 900;
+        font-stretch: normal;
+        font-size: 18px;
+        line-height: 1.5;
+        font-family: "Roboto Bold", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        transition: color 0.7s;
+        text-align: center;
+    }
+    
+    .C:hover {
+        color: red;
+    }
+    
+    .D {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        font-style: normal;
+        font-variant-ligatures: normal;
+        font-variant-caps: normal;
+        font-variant-numeric: normal;
+        font-variant-east-asian: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-size: 15px;
+        line-height: 1;
+        font-family: "RobotoCondensed Bold", "Trebuchet MS", Helvetica, Arial,sans-serif;
+        text-align: center;
+        color: black;
+    }
+    .e{
+        margin-right: 13px;
+    }
+    .f{
+        font-family: 'Roboto';
+        color: rgb(226, 214, 214);
+        margin-top: 10px;
+        font-weight: 800;
+    }
+    .g:hover{
+        color:red;
+    }
+    .g{
+        font-family: 'Roboto';
+        font-weight: 700;
+        transition: 0.3s;
+    }
+    .h {
+        margin-right: 30px;
+        transition: 0.5s;
+    }
+    .h:hover{
+        transform: scale(1.1);
+    }
+    hr{
+        width:76%;
+        text-align:left;
+        margin-left:12%;
+        margin-right: 12%;
+        height:4px;
+        border-width: 0;
+        color:gray;
+        background-color: black;
+    }
+    
+    .wow {
+        width: 7.5rem;
+        height: 7.5rem;
+      }
+    
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1005;
+      }
+    
+      header .logo {
+        position: absolute;
+        top: -1.3vh;
+        left: 30vh;
+      }
+    
+      header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 2vh;
+        right: 2vh;
+      }
+    
+      header ul li {
+        list-style: none;
+      }
+    
+      header ul li a {
+        text-decoration: none;
+        padding: 0.375rem 0.9375rem;
+        color: white;
+        transition: font-size 0.5s;
+      }
+    
+      header ul li a:hover {
+        color: rgb(251, 0, 0);
+        font-size: 1.125rem;
+      }
+    
+    
+    
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+    
+      .dropdown .dropbtn {
+        font-size: 1rem;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 0.875rem 1rem;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        text-transform: uppercase;
+        transition: font-size 0.5s;
+      }
+    
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        color: red;
+        font-size: 1.125rem;
+      }
+    
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background: transparent;
+        width: 15.625rem;
+        box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        right: 0.1rem;
+      }
+    
+      .dropdown-content a {
+        float: none;
+        color: rgb(255, 255, 255);
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: font-size 0.5s;
+        text-transform: uppercase;
+      }
+    
+      .dropdown-content a:hover {
+        color: red;
+        font-size: 1.125rem;
+      }
+    
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+    
+      .cursor {
+        position: fixed;
+        border-radius: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        pointer-events: none;
+        left: -100px;
+        top: 50%;
+        mix-blend-mode: difference;
+        background-color: rgb(255, 255, 255);
+        z-index: 10000;
+        border: 2px solid rgb(255, 255, 255);
+        height: 30px;
+        width: 30px;
+        transition: all 300ms ease-out;
+      }
+    
+      .span {
+        color: white;
+        transition: font-size 0.5s;
+      }
+    
+      .span:hover {
+        font-size: 1.125rem;
+      }
+    
+      .user {
+        position: relative;
+        top: 0;
+      }
+      .down{
+        float: left;
+        overflow: hidden;
+        width: 400px;
+        height: 250px;
+        position: absolute;
+        top: 10px;
+      }
+    
+      .drop-content {
+        display:none;
+        position: relative;
+        background: transparent;
+        width: 20rem;
+        box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+        left:20px;
+        margin-top: 25px;
+      }
+    
+      .drop-content a {
+        float: none;
+        color: rgb(255, 255, 255);
+        padding: 0.75rem 1rem;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        transition: font-size 0.5s;
+        text-transform: uppercase;
+    
+      }
+    
+      .drop-content a:hover {
+        color: red;
+        font-size: 1.125rem;
+      }
+      .drop{
+        position: relative;
+        top: 20px;    
+        left: 18px;
+        font-size:1.5rem;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 0.875rem 1rem;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+        text-transform: uppercase;
+        transition: font-size 0.5s;
+      }
+      .drop b{
+        color: gray;
+        font-weight: 800;
+      }
+      .drop b:hover{
+        cursor: pointer;
+      }
+      .down:hover .drop-content {
+        display: block;
+      }
+      @media (max-width: 400px) {
+        .grid1,
+        .grid2,
+        .grid3,
+        .grid4 {
+          white-space: nowrap;
+          overflow-x: auto;
+          width: 100%;
+          border-bottom: 5px solid;
+          padding: 0px;
+          margin: 5px;
+        }
+        .down{
+          width: 250px;
+        }
+        .B{
+            margin-left: 5px;
+        }
+        .e{
+            margin-left: 5px;
+    
+        }
+        .h{
+            margin-left: 5px;
+    
+        }
+        header ul li a {
+            margin-left: 5px;
+        }
+        hr{
+          display: none;
+        }
+        .f{
+          color:red;
+        }
+        .spot{
+          color: red;
+        }
+        header .logo {
+          position: absolute;
+          top: -1.3vh;
+          left: 10vh;
+      }
+      .drop {
+        position: relative;
+        top: 10vh;
+        left: 8vh;
+        z-index: 1;
+        font-size: 1rem;
+      }
+    
+      .wow img{
+        box-shadow: 0px 0px 0px rgb(31, 30, 30);  }    
+      header ul{
+        top: 15vh;
+        z-index: 1;
+        width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        justify-content: start;
+      }
+      #myHeader{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .drop-content {
+        display: none;
+        position: relative;
+        background: white;
+        width: 20rem;
+        z-index: 10;
+        box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+        left: 10vh;
+        margin-top: 70px;
+        width: 12rem;
+    }
+    .drop-content a {
+      color: black;
+    }
+    .a{
+        display: none;
+    }
+    .b{
+        display: none;
+    }
+    }
+    
+    
+    
+  </style>
+</head>
+<script>
+  function weblink(num)
+  {
+    var addre = ["https://www.marvel.com/characters/iron-man-tony-stark","https://www.marvel.com/characters/captain-america-steve-rogers","https://www.marvel.com/characters/thor-thor-odinson","https://www.marvel.com/characters/doctor-strange-stephen-strange","https://www.marvel.com/characters/scarlet-witch-wanda-maximoff","https://www.marvel.com/characters/spider-man-peter-parker","https://www.marvel.com/articles/comics/what-if-stories-that-came-true-in-the-comics","https://www.marvel.com/articles/comics/first-appearances-moon-knight","https://www.marvel.com/articles/comics/peggy-carter-wields-the-shield-in-new-captain-carter-1-trailer","https://www.marvel.com/watch/trailers-and-extras/who-is-america-chavez","https://www.marvel.com/characters/moon-knight-marc-spector","https://www.marvel.com/characters/miss-america-america-chavez","https://www.marvel.com/characters/jane-foster","https://www.marvel.com/characters/ms-marvel-kamala-khan","https://www.marvel.com/characters/khonshu","https://www.marvel.com/characters/morbius","https://www.marvel.com/characters/black-panther-t-challa","https://www.marvel.com/characters/black-widow-natasha-romanoff","https://www.marvel.com/characters/hulk-bruce-banner","https://www.marvel.com/characters/gamora","https://www.marvel.com/characters/groot","https://www.marvel.com/characters/loki","https://www.marvel.com/characters/sam-wilson","https://www.marvel.com/characters/star-lord-peter-quill","https://www.marvel.com/characters/thanos","https://www.marvel.com/characters/vision","https://www.marvel.com/characters/winter-soldier-bucky-barnes","https://www.marvel.com/characters/hawkeye-clint-barton","https://www.marvel.com/characters/shang-chi","https://www.marvel.com/characters/ant-man-scott-lang","https://www.marvel.com/characters/black-widow-yelena","https://www.marvel.com/characters/red-guardian-alexei-shostakov","https://www.marvel.com/characters/hawkeye-kate-bishop","https://www.marvel.com/characters/captain-marvel-carol-danvers"];
+    location.replace(addre[num]);
+  }
+</script>
+<body>
+<header id="myHeader">
+      <div class="down">
+        <a href="http://localhost/php/homepage.php" target="_blank" class="logo"><img class="wow" src="marvel-logo.png" /></a>
+
+        <button class="drop"><b>Sairatna</b>
+        </button>
+        <div class="drop-content">
+          <a href="https://help.marvel.com/">HELP/FAQS</a>
+          <a href="#">Account Setting </a>
+          <a href="http://localhost/php/logout.php">Logout</a>
+        </div>
+      </div>
+      <ul>
+        <li><a href="http://localhost/php/characters.php">CHARACTERS</a></li>
+        <li><a href="http://localhost/php/Marvel%20Comics.php">COMICS</a></li>
+        <li><a href="http://localhost/php/movies.php" target="_blank">MOVIES</a></li>
+        <li><a href="http://localhost/php/marvell.php">TV SHOWS</a></li>
+        <li><a href="http://localhost/php/music.php">MUSIC</a></li>
+        <li><a href="http://localhost/php/Games.php">GAMES</a></li>
+        <li><a href="http://localhost/php/MARVEL%20NEWS.php">NEWS</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">More
+            </button>
+            <div class="dropdown-content">
+              <a href="https://www.marvel.com/culture-lifestyle">Culture & Lifestyle</a>
+              <a href="https://www.marvel.com/podcasts">Podcast</a>
+              <a href="https://www.shopdisney.com/marvel-content/?CMP=SYN-MARVELCOM:NAV_MORE">Shop</a>
+            </div>
+          </div>
+        </li>
+    </header>
+    <div>
+        <div class="img1"></div>
+        
+    </div>
+    <h1 class="a">MARVEL CHARACTERS</h1>
+    
+    <p class="b">Get hooked on a hearty helping of heroes and villains from the humble House of Ideas!</p>
+    <div class="middlediv">
+      <h2 class="spot">FEATURED CHARACTERS</h2> 
+    </div>
+    
+    <div class="grid1">
+      <div class="B">
+       <img src="ironman.jpg" width="168px" height="210px" class="solo" onclick="weblink(0)"/>
+        <h3 class="C"><a href="https://www.marvel.com/characters/iron-man-tony-stark" target="_blank">IRON MAN</a></h3>
+        <h3 class="D">TONY STARK</h3>
+      </div>
+      <div class="B">
+        <img src="cap.jpg" width="168px" height="210px" onclick="weblink(1)"/>
+        <h3 class="C"><a href="https://www.marvel.com/characters/captain-america-steve-rogers" target="_blank">CAPTAIN AMERICA</a></h3>
+        <h3 class="D">STEVE ROGERS</h3>
+      </div>
+      <div class="B">
+        <img src="THOR.jpg" width="168px" height="210px" onclick="weblink(2)"/></a>
+        <h3 class="C"><a href="https://www.marvel.com/characters/thor-thor-odinson" target="_blank">THOR ODINSON</a></h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="B">
+        <img src="drstrange.jpg" width="168px" height="210px" onclick="weblink(3)"/></a>
+        <h3 class="C"><a href="https://www.marvel.com/characters/doctor-strange-stephen-strange" target="_blank">DOCTOR STRANGE</a></h3>
+        <h3 class="D">DR. STEPHEN STRANGE</h3>
+      </div>
+      <div class="B">
+        <img src="wanda.jpg" width="168px" height="210px" onclick="weblink(4)"/></a>
+        <h3 class="C"><a href="https://www.marvel.com/characters/scarlet-witch-wanda-maximoff" target="_blank">WANDA MAXIMOFF</a></h3>
+        <h3 class="D">SCARLET WITCH</h3>
+      </div>
+      <div class="B">
+        <img src="spidey.jpg" width="168px" height="210px" onclick="weblink(5)"/></a>
+        <h3 class="C"> <a href="https://www.marvel.com/characters/spider-man-peter-parker" target="_blank">SPIDER-MAN</a></h3>
+        <h3 class="D">PETER PARKER</h3>
+      </div>
+      <hr>
+    </div>
+    <br>
+    <div class="mid2">
+      <h2 class="spot">CHARACTER SPOTLIGHT</h2>
+    </div>
+    <div class="grid2">
+      <div class="e">
+        <img class="image" src="c1.jpg" width="280px" height="165px" onclick="weblink(6)"/>
+        <p class="f">COMICS</p>
+        <p class="g">When 'What If?' Comes True</p>
+      </div>
+      <div class="e">
+        <img class="image" src="c2.jpg" width="280px" height="165px" onclick="weblink(7)">
+        <p class="f">COMICS</p>
+        <p class="g">First Appearances: Moon Knight</p>   
+      </div>
+      <div class="e">
+        <img class="image" src="c3.jpg" width="280px" height="165px" onclick="weblink(8)">
+        <p class="f">COMICS</p>
+        <p class="g">Peggy Carter Weilds The Sheild In New <br>'Captain Carter #1' Trailer</p>
+      </div>
+      <div class="e">
+        <img class="image" src="c4.jpg" width="280px" height="165px" onclick="weblink(9)">
+        <p class="f">TRAILERS & EXTRAS</p>
+        <p class="g">Who Is America Chavez!?</p>
+      </div>
+      <hr>
+    </div>
+
+    <div class="grid3">
+      <div class="h">
+        <img src="moonknight.jpg" width="168px" height="210px" onclick="weblink(10)"/>
+        <h3 class="C"><a href="https://www.marvel.com/characters/moon-knight-marc-spector" target="_blank">MOON KNIGHT</a></h3>
+        <h3 class="D">MARC SPECTOR</h3>
+      </div>
+      <div class="h">
+        <img src="chavez.jpg" width="168px" height="210px" onclick="weblink(11)"/>
+        <h3 class="C"><a href="https://www.marvel.com/characters/miss-america-america-chavez" target="_blank">AMERICA</a></h3>
+        <h3 class="D">AMERICA CHAVEZ</h3>
+      </div>
+      <div class="h">
+        <img src="jane.jpg" width="168px" height="210px" onclick="weblink(12)"/>
+        <h3 class="C"><a href="https://www.marvel.com/characters/jane-foster" target="_blank">MIGHTY THOR</h3>
+        <h3 class="D">JANE FOSTER</a></h3>
+      </div>
+      <div class="h">
+        <img src="msmarvel.jpg" width="168px" height="210px" onclick="weblink(13)"/>
+        <h3 class="C"><a href="https://www.marvel.com/characters/ms-marvel-kamala-khan" target="_blank">MS. MARVEL</a></h3>
+        <h3 class="D">KAMALA KHAN</h3>
+      </div>
+      <div class="h">
+        <img src="khonshu.jpg" width="168px" height="210px" onclick="weblink(14)"/>
+        <h3 class="C">KHONSHU</h3>
+        <h3 class="D">CHONS</h3>
+      </div>
+      <div class="h">
+        <img src="morbius.jpg" width="168px" height="210px" onclick="weblink(15)"/>
+        <h3 class="C">MORBIUS</h3>
+        <h3 class="D">DR. MICHAEL MORBIUS</h3>
+      </div>
+      <hr>
+    </div>
+    <br>
+    <div class="mid2">
+      <h2 class="spot">MARVEL CHARACTERS LIST</h2>
+    </div>
+
+    <div class="grid4">
+      <div class="h">
+        <img src="bpanther.jpg" width="168px" height="210px" onclick="weblink(16)"/>
+        <h3 class="C">BLACK PANTHER</h3>
+        <h3 class="D">T'CHALLA</h3>
+      </div>
+      <div class="h">
+        <img src="blackwidow.jpg" width="168px" height="210px" onclick="weblink(17)"/>
+        <h3 class="C">BLACK WIDOW</h3>
+        <h3 class="D">NATASHA ROMANOFF</h3>
+      </div>
+      <div class="h">
+        <img src="hulk.jpg" width="168px" height="210px" onclick="weblink(18)"/>
+        <h3 class="C">HULK</h3>
+        <h3 class="D">BRUCE BANNER</h3>
+      </div>
+      <div class="h">
+        <img src="gamora.jpg" width="168px" height="210px" onclick="weblink(19)"/>
+        <h3 class="C">GAMORA</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="groot.jpg" width="168px" height="210px" onclick="weblink(20)"/>
+        <h3 class="C">GROOT</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="loki.jpg" width="168px" height="210px" onclick="weblink(21)"/>
+        <h3 class="C">LOKI</h3>
+        <h3 class="D"></h3>
+      </div>
+    </div>
+
+    <div class="grid4">
+      <div class="h">
+        <img src="falcon.jpg" width="168px" height="210px" onclick="weblink(22)"/>
+        <h3 class="C">FALCON</h3>
+        <h3 class="D">SAM WILSON</h3>
+      </div>
+      <div class="h">
+        <img src="STARLORD.jpg" width="168px" height="210px" onclick="weblink(23)"/>
+        <h3 class="C">STAR-LORD</h3>
+        <h3 class="D">PETER QUILL</h3>
+      </div>
+      <div class="h">
+        <img src="thanos.jpg" width="168px" height="210px" onclick="weblink(24)"/>
+        <h3 class="C">THANOS</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="vision.jpg" width="168px" height="210px" onclick="weblink(25)"/>
+        <h3 class="C">VISION</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="bucky.jpg" width="168px" height="210px" onclick="weblink(26)"/>
+        <h3 class="C">WINTER SOLDIER</h3>
+        <h3 class="D">BUCKY BARNES</h3>
+      </div>
+      <div class="h">
+        <img src="hawkeye.jpg" width="168px" height="210px" onclick="weblink(27)"/>
+        <h3 class="C">HAWKEYE</h3>
+        <h3 class="D">CLINT BARTON</h3>
+      </div>
+    </div>
+
+    <div class="grid4">
+      <div class="h">
+        <img src="shangchi.jpg" width="168px" height="210px" onclick="weblink(28)"/>
+        <h3 class="C">SHANG-CHI</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="ANT-MAN.jpg" width="168px" height="210px" onclick="weblink(29)"/>
+        <h3 class="C">ANT-MAN</h3>
+        <h3 class="D">SCOTT-LANG</h3>
+      </div>
+      <div class="h">
+        <img src="YELENA.jpg" width="168px" height="210px" onclick="weblink(30)"/>
+        <h3 class="C">YELENA</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="redgauard.jpg" width="168px" height="210px" onclick="weblink(31)"/>
+        <h3 class="C">RED GUARDIAN</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="kate.jpg" width="168px" height="210px" onclick="weblink(32)"/>
+        <h3 class="C">KATE BISHOP</h3>
+        <h3 class="D"></h3>
+      </div>
+      <div class="h">
+        <img src="CAPmarvel.jpg" width="168px" height="210px" onclick="weblink(33)"/>
+        <h3 class="C">CAPTAIN MARVEL</h3>
+        <h3 class="D">CAROL DENVERS</h3>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <br>
+    <div class='cursor' id="cursor"></div>
+  <script>
+    var cursor = document.getElementById("cursor");
+    document.body.addEventListener("mousemove", function(e) {
+      cursor.style.left = e.clientX + "px",
+        cursor.style.top = e.clientY + "px";
+    });
+  </script>
+</body>
+</html>
